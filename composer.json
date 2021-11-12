@@ -1,0 +1,19 @@
+{
+    "name": "vagrant/project",
+    "description": "my first project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vlad",
+            "email": "vlad.bobarika@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
