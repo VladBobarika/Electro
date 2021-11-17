@@ -7,6 +7,7 @@
     }
 
     include '../vendor/autoload.php';
+    include '../app/core.php';
 
     $routes = [
         '/' => 'App\\Controllers\\SiteController@index',

@@ -1,13 +1,29 @@
 <?php
 
-namespace App\Controllers;
+    namespace App\Controllers;
 
-class SiteController {
-    public function index() {
-        include __DIR__ . ' /../../views/main.php';
-    }
+    use App\Models\BaseModel;
+    use App\Models\Category;
+    use App\Models\Product;
+    use App\Models\User;
+    use mysqli;
 
-    public function notFound() {
-        include __DIR__ . ' /../../views/404.php';
-    }
+    class SiteController {
+
+        function debug($num) {
+            echo "<pre>";
+            var_dump($num);
+            echo "</pre>";
+        }
+
+        public function index() {
+            Product::selectAll();
+            die();
+
+            render('main.php');
+        }
+
+        public function notFound() {
+            render('404.php');
+        }
 }
